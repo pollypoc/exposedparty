@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lourdinas.finalaplication">
 
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +23,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".calculadoramedia" />
         <activity android:name=".calculadora" />
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".ChamadaActivity"></activity>
     </application>
 
 </manifest>

@@ -41,12 +41,17 @@
     <string name="camponome">""</string>
     <string name="camposenha">""</string>
 
-    <string name="regnome">""</string>
-    <string name="regsobrenome">""</string>
-    <string name="regformação">""</string>
-    <string name="regtelefone">""</string>
-    <string name="regemail">""</string>
-    <string name="regdata">""</string>
+    <string name="regnome">Nome</string>
+    <string name="regsobrenome">Sobrenome</string>
+    <string name="regformação">Formação</string>
+    <string name="regtelefone">Telefone</string>
+    <string name="regemail">Email</string>
+    <string name="regdata">Data de Nascimento</string>
     <string name="btn_reg">Salvar</string>
+
+    <string name="asterisco">*</string>
+    <string name="hashtag">#</string>
+    <string name="ligar">LIGAR</string>
+    <string name="apagar"> C </string>
 
 </resources>

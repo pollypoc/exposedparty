@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -30,6 +31,28 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView tx_nome = findViewById(R.id.regnome);
+        TextView tx_sobrenome = findViewById(R.id.regsobrenome);
+        TextView tx_formacao = findViewById(R.id.regformação);
+        TextView tx_email = findViewById(R.id.regemail);
+        TextView tx_telefone = findViewById(R.id.regtelefone);
+        TextView tx_data = findViewById(R.id.regdata);
+
+        Intent intentRecebido = getIntent();
+        String nome = intentRecebido.getStringExtra("nome");
+        String sobrenome = intentRecebido.getStringExtra("sobrenome");
+        String formacao = intentRecebido.getStringExtra("formacao");
+        String email = intentRecebido.getStringExtra("email");
+        String telefone = intentRecebido.getStringExtra("telefone");
+        String data = intentRecebido.getStringExtra("data");
+
+        tx_nome.setText(nome);
+        tx_sobrenome.setText(sobrenome);
+        tx_formacao.setText(formacao);
+        tx_email.setText(email);
+        tx_telefone.setText(telefone);
+        tx_data.setText(data);
     }
 
     @Override
@@ -85,6 +108,13 @@ public class MainActivity extends AppCompatActivity
 
             Toast.makeText(getApplicationContext(),
                     "Abrir Calculadora", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.chamadaFalsa) {
+
+            Intent intent = new Intent(MainActivity.this, ChamadaActivity.class);
+            startActivity(intent);
+
+            Toast.makeText(getApplicationContext(),
+                    "Abrir Chamada", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
